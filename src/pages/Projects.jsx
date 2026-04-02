@@ -1,18 +1,35 @@
+import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
+/** Matches service titles on the Services page — use these exact strings as each project `category`. */
+const PROJECT_SERVICE_FILTERS = [
+  'Digital Marketing',
+  'Web Development',
+  'PR Marketing',
+  'Influencer Marketing',
+  'SEO Strategy',
+  'Brand Identity',
+];
+
 const projects = [
-  { id: 1, title: 'Neon X', category: 'Web App', image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop' },
-  { id: 2, title: 'Aura Fintech', category: 'Mobile App', image: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff0f?q=80&w=2070&auto=format&fit=crop' },
-  { id: 3, title: 'Velocity AI', category: 'AI Platform', image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1965&auto=format&fit=crop' },
-  { id: 4, title: 'Elysium', category: 'E-Commerce', image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop' },
-  { id: 5, title: 'Quantum VR', category: 'Web3', image: 'https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?q=80&w=1939&auto=format&fit=crop' },
-  { id: 6, title: 'Nova Marketing', category: 'Branding', image: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=2194&auto=format&fit=crop' },
+  { id: 1, title: 'Gawri Ganga', category: 'Web Development', website: 'https://gawriganga.com', image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2069&auto=format&fit=crop' },
+  { id: 2, title: 'Legaloids', category: 'Web Development', website: 'https://legaloids.com', image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop' },
+  { id: 3, title: 'Meta Microdigital', category: 'Web Development', website: 'https://metamicrodigital.com', image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop' },
+  { id: 4, title: 'Gawri Ganga', category: 'Digital Marketing', website: 'https://gawriganga.com', image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=2074&auto=format&fit=crop' },
+  { id: 5, title: 'Meta Microdigital', category: 'Digital Marketing', website: 'https://metamicrodigital.com', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop' },
 ];
 
 export default function Projects() {
+  const [activeFilter, setActiveFilter] = useState('all');
+
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === 'all') return projects;
+    return projects.filter((p) => p.category === activeFilter);
+  }, [activeFilter]);
+
   return (
-    <div className="pt-32 pb-24 min-h-screen text-[color:var(--text-color)] transition-colors duration-500 relative overflow-hidden">
+    <div className="pt-32 pb-24 min-h-screen text-[color:var(--text-color)] transition-colors duration-500 relative overflow-x-hidden overflow-y-visible">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -30,17 +47,63 @@ export default function Projects() {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-          {projects.map((project, index) => (
-            <motion.div
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="mb-12 md:mb-16 -mx-1 px-1"
+        >
+          <p className="text-xs font-heading uppercase tracking-widest text-[color:var(--text-muted)] mb-4">
+            Filter by service
+          </p>
+          <div className="flex flex-wrap gap-2 md:gap-3">
+            <button
+              type="button"
+              onClick={() => setActiveFilter('all')}
+              className={`shrink-0 rounded-full px-5 py-2.5 text-sm font-heading font-bold uppercase tracking-wide transition-all duration-300 border ${
+                activeFilter === 'all'
+                  ? 'bg-[var(--primary)] text-white border-[var(--primary)]'
+                  : 'glass border-[var(--surface-rgb)]/20 text-[color:var(--text-color)] hover:border-[var(--primary)]/50'
+              }`}
+            >
+              All
+            </button>
+            {PROJECT_SERVICE_FILTERS.map((label) => (
+              <button
+                key={label}
+                type="button"
+                onClick={() => setActiveFilter(label)}
+                className={`shrink-0 rounded-full px-5 py-2.5 text-sm font-heading font-bold uppercase tracking-wide transition-all duration-300 border ${
+                  activeFilter === label
+                    ? 'bg-[var(--primary)] text-white border-[var(--primary)]'
+                    : 'glass border-[var(--surface-rgb)]/20 text-[color:var(--text-color)] hover:border-[var(--primary)]/50'
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-14 md:gap-x-12 md:gap-y-20">
+          {filteredProjects.length === 0 ? (
+            <p className="col-span-full text-center text-[color:var(--text-muted)] py-16 text-lg">
+              No projects in this category yet. Check back soon.
+            </p>
+          ) : (
+            filteredProjects.map((project, index) => (
+            <motion.a
               key={project.id}
+              href={project.website}
+              target="_blank"
+              rel="noreferrer"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: (index % 2) * 0.2, duration: 0.6 }}
-              className="group cursor-pointer block"
+              className="group cursor-pointer block overflow-visible pb-2"
             >
-              <div className="relative overflow-hidden rounded-3xl aspect-[4/3] mb-6 shadow-sm border border-[var(--surface-rgb)]/10">
+              <div className="relative overflow-hidden rounded-3xl aspect-[4/3] mb-8 shadow-sm border border-[var(--surface-rgb)]/10">
                 <motion.img 
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.6 }}
@@ -52,14 +115,17 @@ export default function Projects() {
                   <ArrowUpRight className="text-white" size={24} />
                 </div>
               </div>
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2 group-hover:text-[var(--primary)] transition-colors">{project.title}</h3>
-                  <p className="text-[color:var(--text-muted)]">{project.category}</p>
+              <div className="flex justify-between items-start overflow-visible pb-6">
+                <div className="min-w-0 pr-2">
+                  <h3 className="text-2xl md:text-3xl font-heading font-bold mb-3 leading-snug pb-1 group-hover:text-[var(--primary)] transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-[color:var(--text-muted)] leading-relaxed">{project.category}</p>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.a>
+          ))
+          )}
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Sparkles, Code, Smartphone, Rocket } from 'lucide-react';
+import { ArrowRight, Sparkles, Code, Megaphone, Users } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Hero3D from '../components/canvas/Hero3D';
@@ -13,8 +13,8 @@ gsap.registerPlugin(ScrollTrigger);
 const services = [
   { icon: Sparkles, title: "Digital Marketing", desc: "Data-driven campaigns that convert and build lasting brand equity." },
   { icon: Code, title: "Web Development", desc: "High-performance, immersive websites built with modern web tech." },
-  { icon: Smartphone, title: "App Development", desc: "Native and cross-platform mobile experiences that users love." },
-  { icon: Rocket, title: "AI Solutions", desc: "Integrating cutting-edge AI to automate and scale your business." }
+  { icon: Megaphone, title: "PR Marketing", desc: "Strategic public relations that amplify your brand story and reputation." },
+  { icon: Users, title: "Influencer Marketing", desc: "Leverage top creators to boost your brand reach and drive authentic engagement." }
 ];
 
 const projects = [
