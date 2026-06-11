@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-2">
             <Link to="/" className="text-3xl font-heading font-bold tracking-tighter text-[color:var(--text-color)] mb-6 inline-block">
-              NEXT<span className="text-gradient">SHIFT</span>
+              VERI<span className="text-gradient">ENCE</span>
             </Link>
             <p className="text-[color:var(--text-muted)] max-w-sm mb-8 text-lg">
               We build immersive digital experiences that scale your business into the future.
@@ -45,7 +45,7 @@ export default function Footer() {
               <li><Link to="/legal" className="text-[color:var(--text-muted)] hover:text-[color:var(--text-color)] transition-colors">Terms of Service</Link></li>
             </ul>
             <div className="group relative w-full h-12 bg-black/5 dark:bg-white/5 rounded-full overflow-hidden flex items-center px-4 border border-[var(--surface-rgb)]/20 transition-all cursor-pointer">
-              <span className="text-[color:var(--text-muted)] text-sm group-hover:text-[color:var(--text-color)] w-full block truncate transition-colors">nextshitftsolutions@gmail.com</span>
+              <span className="text-[color:var(--text-muted)] text-sm group-hover:text-[color:var(--text-color)] w-full block truncate transition-colors">wemultify@gmail.com</span>
               <ArrowRight className="absolute right-4 text-[color:var(--text-muted)] group-hover:text-[color:var(--primary)] transition-colors group-hover:translate-x-1" size={16} />
             </div>
           </div>
@@ -53,7 +53,7 @@ export default function Footer() {
         
         <div className="pt-8 border-t border-[var(--surface-rgb)]/20 flex flex-col md:flex-row items-center justify-between">
           <p className="text-[color:var(--text-muted)] text-sm">
-            © {new Date().getFullYear()} Nextshift Solutions. All rights reserved.
+            © {new Date().getFullYear()} Verience Technology and Media. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0 text-sm font-heading font-bold tracking-widest text-[color:var(--text-muted)]">
             BUILD THE FUTURE

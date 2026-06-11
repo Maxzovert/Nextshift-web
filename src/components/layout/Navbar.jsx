@@ -39,7 +39,7 @@ export default function Navbar() {
       )}>
         <div className="flex items-center justify-between h-14 relative">
           <Link to="/" className="text-2xl font-heading font-bold tracking-tighter text-[color:var(--text-color)] z-50">
-            NEXT<span className="text-gradient">SHIFT</span>
+            VERI<span className="text-gradient">ENCE</span>
           </Link>
 
           {/* Desktop Nav */}

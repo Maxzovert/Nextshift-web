@@ -76,7 +76,7 @@ export default function Home() {
           
           <div className="overflow-hidden mb-12 max-w-2xl">
             <p className="hero-text-line text-lg md:text-xl text-[color:var(--text-muted)] font-light">
-              Nextshift is a premium creative agency delivering high-end IT solutions, 
+              Verience is a premium creative agency delivering high-end IT solutions, 
               immersive web experiences, and data-driven marketing.
             </p>
           </div>

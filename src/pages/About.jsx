@@ -14,7 +14,7 @@ export default function About() {
             Our <span className="text-gradient">Story</span>
           </h1>
           <p className="text-xl text-[color:var(--text-muted)] max-w-3xl mx-auto">
-            Founded in 2024, Nextshift isn't just an agency; we're a collective of forward-thinkers, builders, and dreamers obsessed with moving the digital needle.
+            Founded in 2024, Verience isn't just an agency; we're a collective of forward-thinkers, builders, and dreamers obsessed with moving the digital needle.
           </p>
         </motion.div>
 

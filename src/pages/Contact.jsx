@@ -23,7 +23,7 @@ export default function Contact() {
             <div className="space-y-6">
               <div>
                 <h4 className="text-sm tracking-widest uppercase text-[color:var(--text-muted)] mb-2">Email</h4>
-                <a href="mailto:nextshitftsolutions@gmail.com" className="text-2xl font-bold hover:text-[var(--primary)] transition-colors break-words">nextshitftsolutions@gmail.com</a>
+                <a href="mailto:wemultify@gmail.com" className="text-2xl font-bold hover:text-[var(--primary)] transition-colors break-words">wemultify@gmail.com</a>
               </div>
               <div>
                 <h4 className="text-sm tracking-widest uppercase text-[color:var(--text-muted)] mb-2">Phone Number</h4>

@@ -10,7 +10,7 @@ const testimonials = [
     image:
       'https://ui-avatars.com/api/?name=Shobhiit+Kulshreshth&background=6366f1&color=fff&size=128&bold=true',
     quote:
-      'Nextshift captured our vision for Gawri Ganga and turned it into a polished web and marketing presence. Clear communication, solid execution, and a team that actually listens.',
+      'Verience captured our vision for Gawri Ganga and turned it into a polished web and marketing presence. Clear communication, solid execution, and a team that actually listens.',
     rating: 5,
   },
   {
@@ -30,7 +30,7 @@ const testimonials = [
     image:
       'https://ui-avatars.com/api/?name=Mudit+Johri&background=0ea5e9&color=fff&size=128&bold=true',
     quote:
-      'Compliance World needed consistency across web development, SEO, and digital marketing. Nextshift tied it together—better visibility, clearer messaging, and dependable follow-through.',
+      'Compliance World needed consistency across web development, SEO, and digital marketing. Verience tied it together—better visibility, clearer messaging, and dependable follow-through.',
     rating: 5,
   },
   {
@@ -65,7 +65,7 @@ export default function Testimonials() {
             Client <span className="text-gradient">Testimonials</span>
           </h1>
           <p className="text-xl text-[color:var(--text-muted)] max-w-3xl mx-auto">
-            Trusted by ambitious brands worldwide. Real feedback from teams that partnered with Nextshift to scale, launch, and lead.
+            Trusted by ambitious brands worldwide. Real feedback from teams that partnered with Verience to scale, launch, and lead.
           </p>
         </motion.div>
 
