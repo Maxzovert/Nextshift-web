@@ -1,8 +1,8 @@
 {
   "slug": "gawri-ganga",
   "title": "Gawri Ganga",
-  "tagline": "Web, marketing, and SEO for a growing brand.",
-  "description": "End-to-end digital work for Gawri Ganga — from a polished website to ongoing marketing and search visibility.",
+  "tagline": "E-commerce and digital growth for India's authentic spiritual wellness brand.",
+  "description": "Gawri Ganga is an online destination for authentic Rudraksha, malas, aura sprays, and spiritual wellness products — trusted by devotees nationwide with COD, fast dispatch, and certified quality.",
   "services": ["Web Development", "Digital Marketing", "SEO Strategy"],
   "website": "https://gawriganga.com",
   "social": {
@@ -12,11 +12,20 @@
     "twitter": ""
   },
   "highlights": [
-    { "label": "Services", "value": "Web · Marketing · SEO" },
-    { "label": "Deliverables", "value": "Website, campaigns, content" }
+    { "label": "Industry", "value": "Spiritual wellness & e-commerce" },
+    { "label": "Platform", "value": "Full online store with collections & Rashi guides" },
+    { "label": "Verience scope", "value": "Web · Marketing · SEO" }
+  ],
+  "features": [
+    "Rudraksha malas, aura sprays, and curated spiritual collections",
+    "Shop-by-purpose flows — wealth, love, health, protection & more",
+    "Discover-by-Rashi experience for zodiac-aligned products",
+    "Instagram reels, posts, and YouTube content integration on-site",
+    "COD, secure payments, and trust-led product storytelling"
   ],
   "contentPreview": [
-    "We partnered with Gawri Ganga to build a credible online presence — a fast, modern website paired with marketing that reflects their brand voice.",
-    "Our work included web development, digital marketing campaigns, and SEO strategy to improve discoverability and drive consistent traffic."
+    "We built and grow the digital presence for Gawri Ganga — a brand focused on authentic Rudraksha and spiritual wellness. The site combines product discovery, educational content, and social proof to help devotees shop with confidence.",
+    "Our work spans web development, performance-focused e-commerce UX, digital marketing campaigns, and SEO so the brand ranks for high-intent spiritual and wellness searches across India.",
+    "From collection pages and Rashi-based guides to Instagram and YouTube embeds, every touchpoint is designed to reflect Gawri Ganga's emphasis on authenticity, certification, and devotional trust."
   ]
 }

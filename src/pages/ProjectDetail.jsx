@@ -85,6 +85,23 @@ export default function ProjectDetail() {
                 </div>
               </div>
             )}
+
+            {project.features?.length > 0 && (
+              <div>
+                <h2 className="text-lg font-display font-medium mb-4">Key highlights</h2>
+                <ul className="space-y-3">
+                  {project.features.map((item) => (
+                    <li
+                      key={item}
+                      className="flex gap-3 text-[15px] text-[color:var(--text-muted)] leading-relaxed"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] shrink-0 mt-2" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </motion.div>
 
           <motion.aside
